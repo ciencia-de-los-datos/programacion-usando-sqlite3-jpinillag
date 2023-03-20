@@ -41,8 +41,4 @@
 --
 --  >>> Escriba su codigo a partir de este punto <<<
 --
-AlTER TABLE tbl2 ADD YEAR INT;
-
-UPDATE tbl2 SET YEAR = SUBSTRING(c23,1,4);
-
-SELECT YEAR,avg(c21) FROM tbl2 GROUP BY YEAR;
+SELECT strftime('%Y', c23),avg(c21) FROM tbl2 GROUP BY strftime('%Y', c23);
