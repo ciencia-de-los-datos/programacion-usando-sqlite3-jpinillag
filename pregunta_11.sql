@@ -42,4 +42,4 @@ AlTER TABLE tbl1 ADD YEAR INT;
 
 UPDATE tbl1 SET YEAR = SUBSTRING(c14,1,4);
 
-select YEAR , count(*) as CANT from tbl1 WHERE YEAR = 2018;
+SELECT count(*) from tbl1 WHERE YEAR = 2018;
